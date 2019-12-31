@@ -3,5 +3,4 @@ description: 'Create a Sentry release and deployment for your React app.'
 author: 'Jonathan Freeland <jonathan@candidco.com>'
 runs:
   using: 'docker'
-  image: 'docker://getsentry/sentry-cli:1.49.0'
-  entrypoint: 'entrypoint.sh'
+  image: 'Dockerfile'
