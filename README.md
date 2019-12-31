@@ -1,6 +1,6 @@
 # Sentry React Release action
 
-This action creates a Sentry release and deployment for your React app.
+This action creates a Sentry release and deployment for your React app and uploads source maps.
 
 ## Environment
 
@@ -12,7 +12,7 @@ This action creates a Sentry release and deployment for your React app.
 
 **Required** The Sentry authentication token.
 
-#### `PROJECT`
+#### `SENTRY_PROJECT`
 
 **Required** The Sentry project to which this release will be added.
 
@@ -35,7 +35,7 @@ uses: candidco/sentry-react-release@v1
 env:
   SENTRY_ORG: some-org
   SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_TOKEN }}
-  PROJECT: awesome-project
+  SENTRY_PROJECT: awesome-project
   RELEASE: commit-hash
   GITHUB_PROJECT: some-org/awesome-project
   DEPLOY_ENV: production
