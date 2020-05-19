@@ -10,7 +10,7 @@ sentry-cli releases set-commits "$RELEASE" --commit "$GITHUB_PROJECT@$RELEASE"
 sentry-cli releases deploys $RELEASE new -e $DEPLOY_ENV
 
 # Upload sourcemaps to Sentry
-sentry-cli releases files $RELEASE upload-sourcemaps --ext ts --ext js --ext map --url-prefix "~/static/js" --no-rewrite build/static/js
+sentry-cli releases files $RELEASE upload-sourcemaps --ext ts --ext js --ext map --url-prefix "$URL_PREFIX" --no-rewrite $SOURCEMAP_PATH
 
 # Finalize the release
 sentry-cli releases finalize $RELEASE

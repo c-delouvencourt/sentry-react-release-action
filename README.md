@@ -39,4 +39,6 @@ env:
   RELEASE: commit-hash
   GITHUB_PROJECT: some-org/awesome-project
   DEPLOY_ENV: production
+  URL_PREFIX: ~/static/js
+  SOURCEMAP_PATH: build/static/js
 ```
