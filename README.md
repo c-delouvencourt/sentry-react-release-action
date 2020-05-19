@@ -1,6 +1,6 @@
 # Sentry React Release action
 
-This action creates a Sentry release and deployment for your React app and uploads source maps.
+This action creates a Sentry release and deployment for your React app and uploads source maps. You can read more about how Sentry handles [releases](https://docs.sentry.io/workflow/releases/?platform=browsernpm) and [source maps](https://docs.sentry.io/platforms/javascript/sourcemaps/).
 
 ## Environment
 
@@ -27,6 +27,14 @@ This action creates a Sentry release and deployment for your React app and uploa
 #### `DEPLOYMENT_ENV`
 
 **Required** The environment to which this release is being deployed.
+
+#### `URL_PREFIX`
+
+**Required** The URL prefix in front of files. This is useful when files are stored in a subdirectory. For Reach this is normally `~/static/js`. 
+
+#### `SOURCEMAP_PATH`
+
+**Required** The path to the sourcemap(s). For React this is normally `build/static/js`.
 
 ## Example usage
 
