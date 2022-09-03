@@ -3,8 +3,8 @@
 set -e
 
 # Create new Sentry release
-sentry-cli --url $SENTRY_URL releases new -p $SENTRY_PROJECT $RELEASE
-sentry-cli --url $SENTRY_URL releases set-commits "$RELEASE" --commit "$GITHUB_PROJECT@$RELEASE"
+sentry-cli --url $SENTRY_URL releases new --org $SENTRY_ORG -p $SENTRY_PROJECT $RELEASE
+sentry-cli --url $SENTRY_URL releases set-commits  "$RELEASE" --commit "$GITHUB_PROJECT@$RELEASE"
 
 # Create new deploy for this Sentry release
 sentry-cli --url $SENTRY_URL releases deploys $RELEASE new -e $DEPLOY_ENV
